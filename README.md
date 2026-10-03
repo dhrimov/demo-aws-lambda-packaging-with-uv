@@ -4,7 +4,7 @@ Demo repository for packaging AWS Lambda functions with uv when a project has mo
 
 The entire packaging process is described in [Packaging Python Lambdas with uv and package-python-function](https://dhrimov.dev/blog/python-lambda-packaging-uv-package-python-function).
 
-The script from that post is now a GitHub Action, [Package Python Lambda](https://github.com/marketplace/actions/package-python-lambda), and this repo uses it instead of keeping its own copy. That's covered in the next post: [TODO: post title](https://dhrimov.dev/blog/TODO).
+The script from that post is now a GitHub Action, [Package Python Lambda](https://github.com/marketplace/actions/package-python-lambda), and this repo uses it instead of keeping its own copy. That's covered in the next post: [A GitHub Action to Package Python AWS Lambdas with uv](https://dhrimov.dev/blog/github-action-package-python-aws-lambda-uv).
 
 ## Repository layout
 
