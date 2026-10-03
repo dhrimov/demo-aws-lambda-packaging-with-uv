@@ -1,0 +1,27 @@
+name: Package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        lambda: [acme-order-notifier, acme-order-processor]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: dhrimov/package-python-lambda-gha@v1
+        with:
+          input-path: lambdas/${{ matrix.lambda }}
+          output-path: dist
+          python-version: "3.13"
+          platform: aarch64-manylinux2014
+          upload-artifact: "true"
